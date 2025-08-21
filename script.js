@@ -112,7 +112,7 @@ if (heroSection) {
 const contactForm = document.querySelector('.form');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         // Get form data
@@ -128,19 +128,44 @@ if (contactForm) {
             return;
         }
         
-        // Create email content
-        const emailSubject = `New Inquiry from ${name} - JMR Turris Fortis`;
-        const emailBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone || 'Not provided'}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+        // Get submit button and show loading state
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
         
-        // Create mailto link with primary recipient and BCC
-        const mailtoLink = `mailto:ashblue_coder@yahoo.com?bcc=reyvillamar@gmail.com&subject=${encodeURIComponent(emailSubject)}&body=${emailBody}`;
-        
-        // Open email client
-        window.location.href = mailtoLink;
-        
-        // Show success message
-        showNotification('Email client opened. Please send the email to complete your inquiry.', 'success');
-        this.reset();
+        try {
+            // Send data to PHP script
+            const response = await fetch('send_email.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    message: message
+                })
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                showNotification(result.message, 'success');
+                this.reset();
+            } else {
+                showNotification(result.message, 'error');
+            }
+            
+        } catch (error) {
+            console.error('Error:', error);
+            showNotification('Sorry, there was an error sending your message. Please try again later.', 'error');
+        } finally {
+            // Reset button state
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }
     });
 }
 
