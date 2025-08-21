@@ -1,0 +1,28 @@
+<svg width="200" height="80" viewBox="0 0 1024 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main logo icon - stylized building towers -->
+  <g transform="translate(412, 60)">
+    <!-- Central tower group -->
+    <polygon points="0,120 20,80 40,60 60,40 80,20 100,0 120,20 140,40 160,60 180,80 200,120 200,140 0,140" fill="#B8860B"/>
+    
+    <!-- Left tower -->
+    <polygon points="-40,140 -20,100 0,80 20,60 40,40 60,20 80,0 100,20 120,40 140,60 160,80 180,100 200,140" fill="#B8860B" opacity="0.8"/>
+    
+    <!-- Right tower -->
+    <polygon points="0,140 20,100 40,80 60,60 80,40 100,20 120,0 140,20 160,40 180,60 200,80 220,100 240,140" fill="#B8860B" opacity="0.8"/>
+    
+    <!-- Foundation line -->
+    <rect x="-40" y="140" width="280" height="8" fill="#B8860B" rx="4"/>
+  </g>
+  
+  <!-- Company text -->
+  <text x="512" y="220" font-family="Arial, sans-serif" font-size="48" font-weight="300" fill="#B8860B" text-anchor="middle" letter-spacing="8px">JMR TURRIS FORTIS</text>
+  
+  <!-- Subtitle -->
+  <text x="512" y="260" font-family="Arial, sans-serif" font-size="20" font-weight="300" fill="#B8860B" text-anchor="middle" letter-spacing="6px">REALTY CORPORATION</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="200" cy="180" r="3" fill="#B8860B" opacity="0.3"/>
+  <circle cx="824" cy="180" r="3" fill="#B8860B" opacity="0.3"/>
+  <circle cx="180" cy="200" r="2" fill="#B8860B" opacity="0.5"/>
+  <circle cx="844" cy="200" r="2" fill="#B8860B" opacity="0.5"/>
+</svg>

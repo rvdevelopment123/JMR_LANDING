@@ -1,0 +1,84 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky gradient -->
+  <defs>
+    <linearGradient id="luxurySky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="luxuryBuilding" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8F8FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E6E6FA;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky -->
+  <rect width="400" height="200" fill="url(#luxurySky)"/>
+  
+  <!-- Ground -->
+  <rect y="200" width="400" height="100" fill="#90EE90"/>
+  
+  <!-- Main luxury tower -->
+  <rect x="150" y="50" width="100" height="200" fill="url(#luxuryBuilding)" stroke="#D3D3D3" stroke-width="2"/>
+  
+  <!-- Side towers -->
+  <rect x="80" y="80" width="70" height="170" fill="url(#luxuryBuilding)" stroke="#D3D3D3" stroke-width="2"/>
+  <rect x="250" y="90" width="60" height="160" fill="url(#luxuryBuilding)" stroke="#D3D3D3" stroke-width="2"/>
+  
+  <!-- Luxury features -->
+  <!-- Balconies -->
+  <g fill="#B8860B" opacity="0.8">
+    <rect x="145" y="70" width="110" height="4"/>
+    <rect x="145" y="100" width="110" height="4"/>
+    <rect x="145" y="130" width="110" height="4"/>
+    <rect x="145" y="160" width="110" height="4"/>
+    <rect x="145" y="190" width="110" height="4"/>
+  </g>
+  
+  <!-- Premium windows -->
+  <g fill="#4169E1" opacity="0.7">
+    <!-- Main tower -->
+    <rect x="160" y="60" width="12" height="16" rx="2"/>
+    <rect x="176" y="60" width="12" height="16" rx="2"/>
+    <rect x="192" y="60" width="12" height="16" rx="2"/>
+    <rect x="208" y="60" width="12" height="16" rx="2"/>
+    <rect x="224" y="60" width="12" height="16" rx="2"/>
+    
+    <rect x="160" y="85" width="12" height="16" rx="2"/>
+    <rect x="176" y="85" width="12" height="16" rx="2"/>
+    <rect x="192" y="85" width="12" height="16" rx="2"/>
+    <rect x="208" y="85" width="12" height="16" rx="2"/>
+    <rect x="224" y="85" width="12" height="16" rx="2"/>
+    
+    <rect x="160" y="110" width="12" height="16" rx="2"/>
+    <rect x="176" y="110" width="12" height="16" rx="2"/>
+    <rect x="192" y="110" width="12" height="16" rx="2"/>
+    <rect x="208" y="110" width="12" height="16" rx="2"/>
+    <rect x="224" y="110" width="12" height="16" rx="2"/>
+    
+    <!-- Side buildings -->
+    <rect x="90" y="100" width="10" height="14" rx="1"/>
+    <rect x="105" y="100" width="10" height="14" rx="1"/>
+    <rect x="120" y="100" width="10" height="14" rx="1"/>
+    <rect x="135" y="100" width="10" height="14" rx="1"/>
+    
+    <rect x="260" y="110" width="10" height="14" rx="1"/>
+    <rect x="275" y="110" width="10" height="14" rx="1"/>
+    <rect x="290" y="110" width="10" height="14" rx="1"/>
+  </g>
+  
+  <!-- Luxury entrance -->
+  <rect x="185" y="220" width="30" height="30" fill="#8B4513" rx="3"/>
+  <rect x="195" y="225" width="10" height="20" fill="#654321" rx="2"/>
+  
+  <!-- Landscaping -->
+  <circle cx="50" cy="220" r="15" fill="#228B22"/>
+  <rect x="47" y="220" width="6" height="20" fill="#8B4513"/>
+  
+  <circle cx="350" cy="225" r="12" fill="#228B22"/>
+  <rect x="348" y="225" width="4" height="15" fill="#8B4513"/>
+  
+  <!-- Luxury amenities indicator -->
+  <rect x="20" y="20" width="120" height="40" fill="rgba(255,255,255,0.9)" rx="5"/>
+  <text x="30" y="35" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#B8860B">LUXURY CONDOS</text>
+  <text x="30" y="50" font-family="Arial, sans-serif" font-size="10" fill="#666">Premium Living</text>
+</svg>
