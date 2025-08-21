@@ -6,6 +6,13 @@ const navLinks = document.querySelectorAll('.nav-link');
 navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     navToggle.classList.toggle('active');
+    
+    // Prevent body scroll when menu is open
+    if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
 });
 
 // Close mobile menu when clicking on a link
@@ -13,7 +20,26 @@ navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         navToggle.classList.remove('active');
+        document.body.style.overflow = '';
     });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
+
+// Handle window resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+        document.body.style.overflow = '';
+    }
 });
 
 // Smooth Scrolling for Navigation Links
@@ -318,12 +344,67 @@ function initPropertyCardEffects() {
     });
 }
 
+// Touch enhancements for mobile devices
+function initTouchEnhancements() {
+    // Add touch feedback for buttons
+    const buttons = document.querySelectorAll('.btn, .property-card, .team-member');
+    
+    buttons.forEach(button => {
+        button.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.98)';
+        }, { passive: true });
+        
+        button.addEventListener('touchend', function() {
+            this.style.transform = '';
+        }, { passive: true });
+        
+        button.addEventListener('touchcancel', function() {
+            this.style.transform = '';
+        }, { passive: true });
+    });
+    
+    // Improve form inputs for mobile
+    const inputs = document.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+        // Add focus styles for better visibility
+        input.addEventListener('focus', function() {
+            this.parentElement.classList.add('focused');
+        });
+        
+        input.addEventListener('blur', function() {
+            this.parentElement.classList.remove('focused');
+        });
+    });
+    
+    // Add swipe gesture support for property cards
+    let startX = 0;
+    let startY = 0;
+    
+    document.addEventListener('touchstart', function(e) {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+    }, { passive: true });
+    
+    document.addEventListener('touchmove', function(e) {
+        if (!startX || !startY) return;
+        
+        const diffX = startX - e.touches[0].clientX;
+        const diffY = startY - e.touches[0].clientY;
+        
+        // Prevent horizontal scroll on mobile when swiping vertically
+        if (Math.abs(diffY) > Math.abs(diffX)) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+}
+
 // Initialize all features when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     initPropertyFilter();
     initLazyLoading();
     initScrollToTop();
     initPropertyCardEffects();
+    initTouchEnhancements();
     
     // Add loading animation to page
     document.body.style.opacity = '0';
@@ -412,6 +493,17 @@ function trapFocus(element) {
         }
     });
 }
+
+// Show coming soon notification for properties
+function showComingSoon(propertyName) {
+    showNotification(`${propertyName} details page coming soon! Contact us for more information about this property.`, 'info');
+}
+
+// Export functions for global use
+window.JMRRealty = {
+    showNotification,
+    showComingSoon
+};
 
 // Console welcome message
 console.log('%c🏠 JMR Turris Fortis Realty Corporation', 'color: #B8860B; font-size: 16px; font-weight: bold;');
