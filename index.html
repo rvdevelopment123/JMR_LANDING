@@ -3,266 +3,486 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon - JMR Turris Fortis Realty</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            color: white;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .coming-soon-container {
-            text-align: center;
-            max-width: 600px;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .logo {
-            width: 150px;
-            height: auto;
-            margin-bottom: 30px;
-            border-radius: 10px;
-        }
-
-        .title {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #d4af37, #f4e4a6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-            color: #cccccc;
-            line-height: 1.6;
-        }
-
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
-
-        .countdown-item {
-            background: rgba(212, 175, 55, 0.1);
-            border: 2px solid #d4af37;
-            border-radius: 15px;
-            padding: 20px;
-            min-width: 100px;
-            backdrop-filter: blur(5px);
-        }
-
-        .countdown-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #d4af37;
-            display: block;
-        }
-
-        .countdown-label {
-            font-size: 0.9rem;
-            color: #cccccc;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .message {
-            font-size: 1.1rem;
-            color: #cccccc;
-            margin-bottom: 30px;
-        }
-
-        .contact-info {
-            font-size: 0.9rem;
-            color: #999999;
-        }
-
-        .contact-info a {
-            color: #d4af37;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-info a:hover {
-            color: #f4e4a6;
-        }
-
-        .particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        .particle {
-            position: absolute;
-            background: #d4af37;
-            border-radius: 50%;
-            opacity: 0.1;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
-        }
-
-        @media (max-width: 768px) {
-            .coming-soon-container {
-                margin: 20px;
-                padding: 30px 20px;
-            }
-
-            .title {
-                font-size: 2.5rem;
-            }
-
-            .countdown {
-                gap: 15px;
-            }
-
-            .countdown-item {
-                padding: 15px;
-                min-width: 80px;
-            }
-
-            .countdown-number {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .title {
-                font-size: 2rem;
-            }
-
-            .countdown-item {
-                padding: 10px;
-                min-width: 70px;
-            }
-
-            .countdown-number {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
+    <title>JMR Turris Fortis Realty Corporation - Premium Real Estate Development</title>
+    <meta name="description" content="JMR Turris Fortis Realty Corporation - Your trusted partner in premium real estate development. Featuring exclusive properties from Alveo Land and Landco Pacific.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <body>
-    <div class="particles" id="particles"></div>
-    
-    <div class="coming-soon-container">
-        <img src="assets/logo.jpg" alt="JMR Turris Fortis Realty" class="logo">
-        
-        <h1 class="title">Coming Soon</h1>
-        
-        <p class="subtitle">
-            We're working hard to bring you an amazing new experience.<br>
-            Our premium real estate platform will be launching soon!
-        </p>
-        
-        <div class="countdown" id="countdown">
-            <div class="countdown-item">
-                <span class="countdown-number" id="hours">00</span>
-                <span class="countdown-label">Hours</span>
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="#home">
+                        <img src="assets/logo.jpg" alt="JMR Turris Fortis Realty Corporation" class="logo">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#properties" class="nav-link">Properties</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
-            <div class="countdown-item">
-                <span class="countdown-number" id="minutes">00</span>
-                <span class="countdown-label">Minutes</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-number" id="seconds">00</span>
-                <span class="countdown-label">Seconds</span>
-            </div>
-        </div>
-        
-        <p class="message">
-            Get ready to discover luxury properties and exceptional real estate opportunities.
-        </p>
-        
-        <div class="contact-info">
-            <p>For inquiries, contact us at:</p>
-            <p><a href="mailto:info@jmrturrisfortis.com">info@jmrturrisfortis.com</a></p>
-            <p><a href="tel:+639178995900">+63 917 899 5900</a></p>
-        </div>
-    </div>
+        </nav>
+    </header>
 
-    <script>
-        // Set countdown target time (24 hours from now)
-        const targetTime = new Date().getTime() + (24 * 60 * 60 * 1000);
-        
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const timeLeft = targetTime - now;
-            
-            if (timeLeft > 0) {
-                const hours = Math.floor(timeLeft / (1000 * 60 * 60));
-                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-subtitle">JMR Turris Fortis</span>
+                    <span class="hero-main">Realty Corporation</span>
+                </h1>
+                <p class="hero-description">
+                    Brokering modern, sustainable, and well-designed communities that meet the evolving needs of Filipino families and businesses in South Luzon and Metro Manila.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Premium Developments</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Happy Families</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#properties" class="btn btn-primary">Explore Properties</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/hero-property.svg" alt="Premium Real Estate Development" class="hero-img">
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span class="scroll-text">Scroll to explore</span>
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
+
+    <!-- Featured Properties Section -->
+    <section id="properties" class="properties">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Developments</h2>
+                <p class="section-subtitle">Discover our premium residential and commercial properties from trusted developers</p>
+            </div>
+
+            <!-- Alveo Land Properties -->
+            <div class="developer-section">
+                <div class="developer-header">
+                    <img src="assets/alveo-logo.svg" alt="Alveo Land" class="developer-logo">
+                    <div class="developer-info">
+                        <h3 class="developer-name">Alveo Land</h3>
+                        <p class="developer-description">Premium real estate developer creating vibrant communities across the Philippines</p>
+                    </div>
+                </div>
                 
-                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-            } else {
-                // Countdown finished - redirect to main site
-                window.location.href = 'landing.html';
-            }
-        }
-        
-        // Update countdown every second
-        setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call
-        
-        // Create floating particles
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 50;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
+                <div class="properties-grid">
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="assets/hero-property.svg" alt="South Palm Grove" class="property-img">
+                            <div class="property-badge">Residential Lots</div>
+                        </div>
+                        <div class="property-content">
+                            <h4 class="property-title">South Palm Grove</h4>
+                            <p class="property-location">Lipa City, Batangas</p>
+                            <p class="property-description">A premium residential community offering spacious lots in the heart of Lipa City, perfect for families seeking a peaceful yet accessible lifestyle.</p>
+                            <div class="property-features">
+                                <span class="feature">Gated Community</span>
+                                <span class="feature">24/7 Security</span>
+                                <span class="feature">Clubhouse</span>
+                            </div>
+                            <div class="property-actions">
+                                <a href="south-palmgrove.html" class="btn btn-outline">View Details</a>
+                                <a href="#contact" class="btn btn-primary">Inquire Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="assets/hero-property.svg" alt="South Mont Estate" class="property-img">
+                            <div class="property-badge">Residential Lots</div>
+                        </div>
+                        <div class="property-content">
+                            <h4 class="property-title">South Mont Estate</h4>
+                            <p class="property-location">Silang, Cavite</p>
+                            <p class="property-description">An elevated residential development offering panoramic views and cool mountain breeze, strategically located in Silang, Cavite.</p>
+                            <div class="property-features">
+                                <span class="feature">Mountain Views</span>
+                                <span class="feature">Cool Climate</span>
+                                <span class="feature">Sports Facilities</span>
+                            </div>
+                            <div class="property-actions">
+                                <a href="south-mont-estate.html" class="btn btn-outline">View Details</a>
+                                <a href="#contact" class="btn btn-primary">Inquire Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="assets/hero-property.svg" alt="Lanewood Hills" class="property-img">
+                            <div class="property-badge">Residential Lots</div>
+                        </div>
+                        <div class="property-content">
+                            <h4 class="property-title">Lanewood Hills</h4>
+                            <p class="property-location">Nuvali, Laguna</p>
+                            <p class="property-description">An exclusive residential community by Ayala Land Premier featuring premium lots with modern amenities and sustainable living in the heart of Nuvali.</p>
+                            <div class="property-features">
+                                <span class="feature">Premium Location</span>
+                                <span class="feature">Eco-Friendly</span>
+                                <span class="feature">Modern Amenities</span>
+                            </div>
+                            <div class="property-actions">
+                                <a href="lanewood-hills.html" class="btn btn-outline">View Details</a>
+                                <a href="#contact" class="btn btn-primary">Inquire Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="assets/hero-property.svg" alt="Alveo VERDEA" class="property-img">
+                            <div class="property-badge">Residential Lots</div>
+                        </div>
+                        <div class="property-content">
+                            <h4 class="property-title">Alveo VERDEA</h4>
+                            <p class="property-location">Southmont Estate, Cavite</p>
+                            <p class="property-description">An intimate community embraced by nature, offering nurturing suburban living with modern amenities and sustainable design in a 25-hectare development.</p>
+                            <div class="property-features">
+                                <span class="feature">Nature-Embraced</span>
+                                <span class="feature">Resort-Style Living</span>
+                                <span class="feature">Modern Contemporary</span>
+                            </div>
+                            <div class="property-actions">
+                                <a href="alveo-verdea.html" class="btn btn-outline">View Details</a>
+                                <a href="#contact" class="btn btn-primary">Inquire Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="assets/hillside-ridge-hero.jpg" alt="Alveo HILLSIDE RIDGE PH2" class="property-img">
+                            <div class="property-badge">Premium Hillside</div>
+                        </div>
+                        <div class="property-content">
+                            <h4 class="property-title">Alveo HILLSIDE RIDGE PH2</h4>
+                            <p class="property-location">Premium Hillside Location</p>
+                            <p class="property-description">Experience elevated living in this premium hillside development featuring modern amenities, stunning views, and thoughtfully designed spaces for contemporary families.</p>
+                            <div class="property-features">
+                                <span class="feature">Hillside Views</span>
+                                <span class="feature">Premium Amenities</span>
+                                <span class="feature">Modern Design</span>
+                            </div>
+                            <div class="property-actions">
+                                <a href="alveo-hillside-ridge.html" class="btn btn-outline">View Details</a>
+                                <a href="#contact" class="btn btn-primary">Inquire Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Landco Pacific Properties -->
+            <div class="developer-section">
+                <div class="developer-header">
+                    <img src="assets/landco-logo.svg" alt="Landco Pacific" class="developer-logo">
+                    <div class="developer-info">
+                        <h3 class="developer-name">Landco Pacific</h3>
+                        <p class="developer-description">Creating distinctive landscapes of leisure and luxury beachside living destinations</p>
+                    </div>
+                </div>
                 
-                // Random size and position
-                const size = Math.random() * 4 + 2;
-                particle.style.width = size + 'px';
-                particle.style.height = size + 'px';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                
-                // Random animation delay
-                particle.style.animationDelay = Math.random() * 6 + 's';
-                
-                particlesContainer.appendChild(particle);
-            }
-        }
-        
-        // Initialize particles when page loads
-        window.addEventListener('load', createParticles);
-    </script>
+                <div class="properties-grid">
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="assets/luxury-condos.svg" alt="The Residences at Terrazas de Punta Fuego" class="property-img">
+                            <div class="property-badge">Luxury Condos</div>
+                        </div>
+                        <div class="property-content">
+                            <h4 class="property-title">The Residences at Terrazas de Punta Fuego</h4>
+                            <p class="property-location">Nasugbu, Batangas</p>
+                            <p class="property-description">Exclusive beachfront residences with panoramic sea views, offering the ultimate in luxury coastal living just 2 hours from Metro Manila.</p>
+                            <div class="property-features">
+                                <span class="feature">Beachfront</span>
+                                <span class="feature">Sea Views</span>
+                                <span class="feature">Club Access</span>
+                            </div>
+                            <div class="property-actions">
+                                <a href="#contact" class="btn btn-outline" onclick="showComingSoon('The Residences at Terrazas de Punta Fuego')">View Details</a>
+                                <a href="#contact" class="btn btn-primary">Inquire Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="assets/resort-condos.svg" alt="The Nautilus at CaSoBē" class="property-img">
+                            <div class="property-badge">Resort Condos</div>
+                        </div>
+                        <div class="property-content">
+                            <h4 class="property-title">The Nautilus at CaSoBē</h4>
+                            <p class="property-location">Calatagan, Batangas</p>
+                            <p class="property-description">A maritime-inspired sanctuary offering luxurious coastal living with modern amenities and stunning ocean views.</p>
+                            <div class="property-features">
+                                <span class="feature">Ocean Views</span>
+                                <span class="feature">Resort Amenities</span>
+                                <span class="feature">Investment Option</span>
+                            </div>
+                            <div class="property-actions">
+                                <a href="#contact" class="btn btn-outline" onclick="showComingSoon('The Nautilus at CaSoBē')">View Details</a>
+                                <a href="#contact" class="btn btn-primary">Inquire Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="assets/beachfront-condos.svg" alt="The Spinnaker at Club Laiya" class="property-img">
+                            <div class="property-badge">Beachfront Condos</div>
+                        </div>
+                        <div class="property-content">
+                            <h4 class="property-title">The Spinnaker at Club Laiya</h4>
+                            <p class="property-location">Laiya, San Juan, Batangas</p>
+                            <p class="property-description">A striking beachfront condominium with panoramic sea views and mountain vistas, embodying elegance and luxury.</p>
+                            <div class="property-features">
+                                <span class="feature">Beachfront</span>
+                                <span class="feature">Sky Bar</span>
+                                <span class="feature">Infinity Pool</span>
+                            </div>
+                            <div class="property-actions">
+                                <a href="#contact" class="btn btn-outline" onclick="showComingSoon('The Spinnaker at Club Laiya')">View Details</a>
+                                <a href="#contact" class="btn btn-primary">Inquire Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About JMR Turris Fortis</h2>
+                    <p class="about-description">
+                        JMR Turris Fortis Realty Corporation is a Philippine-based real estate company focused on brokering high-quality residential and commercial properties. The company is committed to building and selling modern, sustainable, and well-designed communities that meet the evolving needs of Filipino families and businesses in South Luzon and Metro Manila.
+                    </p>
+                    <p class="about-description">
+                        Guided by integrity, innovation, and a passion for excellence, JMR Turris Fortis aims to create and sell spaces that offer comfort, functionality, and long-term value. Whether it's a family home, a mixed-use development, or a commercial space, the company ensures each project reflects strong design, quality construction, and smart urban planning.
+                    </p>
+                    <p class="about-description">
+                        Founded and Headed by Mr. Jasper M. Robles, REB, CTEP, RFC, REP, AWP, AEPP with a dynamic team of passionate salespeople, we endeavor to provide utmost service to all our clientele.
+                    </p>
+                    <div class="about-values">
+                        <div class="value-item">
+                            <h4>Integrity</h4>
+                            <p>Building trust through transparent and honest business practices</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>Innovation</h4>
+                            <p>Embracing modern design and sustainable development practices</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>Excellence</h4>
+                            <p>Delivering superior quality in every project we undertake</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="assets/hero-property.svg" alt="JMR Turris Fortis Team" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Leadership</h2>
+                <p class="section-subtitle">Meet the experienced professionals behind JMR Turris Fortis</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assets/jasper-robles.jpg" alt="Jasper M. Robles" class="member-img">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Jasper M. Robles</h3>
+                        <p class="member-title">CEO | Head Broker</p>
+                        <p class="member-credentials">REB, CTEP, RFC, REP, AWP, AEPP</p>
+                        <p class="member-license">PRC REB License: 0035373</p>
+                        <p class="member-license">DHSUD License: RFO-4A-B-2006</p>
+                        <div class="member-contact">
+                            <a href="tel:+639178995900" class="contact-link">+63.917.899.5900</a>
+                            <a href="mailto:jmrrealestatemanagement@gmail.com" class="contact-link">jmrrealestatemanagement@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assets/vefrance-divina.jpg" alt="Vefrance Divina" class="member-img">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Vefrance Divina</h3>
+                        <p class="member-title">Administrative Assistant</p>
+                        <div class="member-contact">
+                            <a href="tel:+639481680253" class="contact-link">+63.948.168.0253</a>
+                            <a href="mailto:jmrturrisfortisrealtycorp@gmail.com" class="contact-link">jmrturrisfortisrealtycorp@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="contact-description">
+                        Ready to find your dream property? Contact our experienced team for personalized assistance and expert guidance.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h4>Phone</h4>
+                            <a href="tel:+639178995900">+63.917.899.5900</a>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Email</h4>
+                            <a href="mailto:jmrrealestatemanagement@gmail.com">jmrrealestatemanagement@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Social Media</h4>
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/share/1Cd7fhdxQM/?mibextid=wwXIfr" class="social-link" target="_blank">Facebook</a>
+                                <a href="https://www.tiktok.com/@broker.jasper?_t=ZS-8z3vVbH2jeE&_r=1" class="social-link" target="_blank">TikTok</a>
+                                <a href="https://youtube.com/@jmrturrisfortisrealty?si=PDP_SCBgazCsD2iv" class="social-link" target="_blank">YouTube</a>
+                                <a href="https://www.linkedin.com/in/jasper-mendoza-robles-reb-ctep-rfc-rep-awp-aepp-3537a773?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-link" target="_blank">LinkedIn</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Viber / WhatsApp</h4>
+                            <a href="viber://chat?number=+639178995900">+63.917.899.5900</a>
+                            <a href="https://wa.me/639178995900" target="_blank">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form class="form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="property">Property Interest</label>
+                            <select id="property" name="property">
+                                <option value="">Select a property</option>
+                                <option value="south-palmgrove">South Palm Grove</option>
+                                <option value="southmont-estate">South Mont Estate</option>
+                                <option value="lanewood-hills">Lanewood Hills</option>
+                                <option value="alveo-verdea">Alveo VERDEA</option>
+                                <option value="alveo-hillside-ridge">Alveo HILLSIDE RIDGE PH2</option>
+                                <option value="terrazas-punta-fuego">Terrazas de Punta Fuego</option>
+                                <option value="nautilus-casobe">The Nautilus at CaSoBē</option>
+                                <option value="spinnaker-laiya">The Spinnaker at Club Laiya</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your property requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="assets/logo.jpg" alt="JMR Turris Fortis" class="footer-logo">
+                    <p class="footer-description">
+                        Brokering modern, sustainable communities that meet the evolving needs of Filipino families and businesses in South Luzon and Metro Manila.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#properties">Properties</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact">
+                        <p>+63.917.899.5900</p>
+                        <p>jmrrealestatemanagement@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/1Cd7fhdxQM/?mibextid=wwXIfr" class="social-link" target="_blank">Facebook</a>
+                        <a href="https://www.tiktok.com/@broker.jasper?_t=ZS-8z3vVbH2jeE&_r=1" class="social-link" target="_blank">TikTok</a>
+                        <a href="https://youtube.com/@jmrturrisfortisrealty?si=PDP_SCBgazCsD2iv" class="social-link" target="_blank">YouTube</a>
+                        <a href="https://www.linkedin.com/in/jasper-mendoza-robles-reb-ctep-rfc-rep-awp-aepp-3537a773?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-link" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 JMR Turris Fortis Realty Corporation. All rights reserved.</p>
+                <p class="footer-quote">"The name of the LORD is a strong tower; the righteous man runs into it and is safe." - Proverbs 18:10 ESV</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
