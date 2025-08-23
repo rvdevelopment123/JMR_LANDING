@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
+  <!-- Background -->
+  <rect width="200" height="80" fill="#ffffff"/>
+  
+  <!-- Ayala Land Premier Text -->
+  <text x="100" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2c5530">
+    AYALA LAND
+  </text>
+  <text x="100" y="50" font-family="Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="middle" fill="#2c5530">
+    PREMIER
+  </text>
+  
+  <!-- Decorative element -->
+  <circle cx="100" cy="60" r="3" fill="#2c5530"/>
+</svg>

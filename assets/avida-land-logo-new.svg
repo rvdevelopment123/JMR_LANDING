@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <rect width="600" height="400" fill="#c41e3a"/>
+  <!-- Subtle pattern background -->
+  <defs>
+    <pattern id="leafPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M20,10 Q30,5 35,15 Q30,25 20,20 Q10,25 5,15 Q10,5 20,10" fill="#b01729" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="400" fill="url(#leafPattern)"/>
+  <g transform="translate(300, 200)">
+    <text x="0" y="-20" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" font-weight="300" fill="white">Avida</text>
+    <text x="0" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="normal" fill="white">an AyalaLand company</text>
+  </g>
+</svg>

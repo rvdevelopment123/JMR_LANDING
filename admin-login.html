@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - JMR Properties</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .admin-login {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            padding: 20px;
+        }
+        
+        .login-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        
+        .login-logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 30px;
+        }
+        
+        .login-title {
+            color: #000;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .login-subtitle {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .form-label {
+            display: block;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #D4AF37;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+        
+        .login-button {
+            width: 100%;
+            background: #D4AF37;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        .login-button:hover {
+            background: #B8941F;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        .login-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .error-message {
+            background: #fee;
+            color: #c33;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            display: none;
+        }
+        
+        .success-message {
+            background: #efe;
+            color: #3c3;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            display: none;
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #ffffff;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .back-link {
+            display: inline-block;
+            color: #D4AF37;
+            text-decoration: none;
+            margin-top: 20px;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: #B8941F;
+        }
+        
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 30px 20px;
+            }
+            
+            .login-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-login">
+        <div class="login-container">
+            <img src="assets/jmr-logo.svg" alt="JMR Properties" class="login-logo">
+            <h1 class="login-title">Admin Login</h1>
+            <p class="login-subtitle">Access the JMR Properties CMS</p>
+            
+            <div id="errorMessage" class="error-message"></div>
+            <div id="successMessage" class="success-message"></div>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" name="password" class="form-input" required>
+                </div>
+                
+                <button type="submit" id="loginButton" class="login-button">
+                    <span id="buttonText">Sign In</span>
+                    <span id="buttonLoading" class="loading" style="display: none;"></span>
+                </button>
+            </form>
+            
+            <a href="index.html" class="back-link">← Back to Website</a>
+            
+            <div class="theme-switcher" style="margin-top: 20px;">
+                <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme" style="background: none; border: 1px solid #D4AF37; border-radius: 6px; padding: 8px 12px; color: #D4AF37; cursor: pointer; font-size: 14px;">
+                    <span class="theme-icon" id="theme-icon">🌙</span>
+                    <span style="margin-left: 5px;">Theme</span>
+                </button>
+                <div class="theme-dropdown" id="theme-dropdown" style="display: none; position: absolute; background: white; border: 1px solid #e0e0e0; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: 5px; min-width: 120px; z-index: 1000;">
+                    <button class="theme-option" data-theme="light" style="width: 100%; padding: 10px; border: none; background: none; text-align: left; cursor: pointer; display: flex; align-items: center; font-size: 14px;">
+                        <span class="theme-option-icon">☀️</span>
+                        <span class="theme-option-text" style="margin-left: 8px;">Light</span>
+                    </button>
+                    <button class="theme-option" data-theme="dark" style="width: 100%; padding: 10px; border: none; background: none; text-align: left; cursor: pointer; display: flex; align-items: center; font-size: 14px;">
+                        <span class="theme-option-icon">🌙</span>
+                        <span class="theme-option-text" style="margin-left: 8px;">Dark</span>
+                    </button>
+                    <button class="theme-option" data-theme="system" style="width: 100%; padding: 10px; border: none; background: none; text-align: left; cursor: pointer; display: flex; align-items: center; font-size: 14px;">
+                        <span class="theme-option-icon">💻</span>
+                        <span class="theme-option-text" style="margin-left: 8px;">System</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const API_BASE_URL = 'http://localhost:5001/api';
+        
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const loginButton = document.getElementById('loginButton');
+            const buttonText = document.getElementById('buttonText');
+            const buttonLoading = document.getElementById('buttonLoading');
+            const errorMessage = document.getElementById('errorMessage');
+            const successMessage = document.getElementById('successMessage');
+            
+            // Reset messages
+            errorMessage.style.display = 'none';
+            successMessage.style.display = 'none';
+            
+            // Show loading state
+            loginButton.disabled = true;
+            buttonText.style.display = 'none';
+            buttonLoading.style.display = 'inline-block';
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/auth/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    // Store token
+                    localStorage.setItem('adminToken', data.token);
+                    localStorage.setItem('adminUser', JSON.stringify(data.user));
+                    
+                    // Show success message
+                    successMessage.textContent = 'Login successful! Redirecting...';
+                    successMessage.style.display = 'block';
+                    
+                    // Redirect to admin dashboard
+                    setTimeout(() => {
+                        window.location.href = 'admin-dashboard.html';
+                    }, 1500);
+                } else {
+                    throw new Error(data.message || 'Login failed');
+                }
+            } catch (error) {
+                console.error('Login error:', error);
+                errorMessage.textContent = error.message || 'An error occurred during login';
+                errorMessage.style.display = 'block';
+            } finally {
+                // Reset button state
+                loginButton.disabled = false;
+                buttonText.style.display = 'inline-block';
+                buttonLoading.style.display = 'none';
+            }
+        });
+        
+        // Check if already logged in
+        window.addEventListener('load', () => {
+            const token = localStorage.getItem('adminToken');
+            if (token) {
+                // Verify token is still valid
+                fetch(`${API_BASE_URL}/auth/me`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        window.location.href = 'admin-dashboard.html';
+                    }
+                })
+                .catch(() => {
+                    // Token invalid, remove it
+                    localStorage.removeItem('adminToken');
+                    localStorage.removeItem('adminUser');
+                });
+            }
+        });
+    </script>
+    <script src="includes/theme-switcher.js"></script>
+</body>
+</html>

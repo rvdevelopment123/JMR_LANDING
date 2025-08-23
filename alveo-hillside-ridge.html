@@ -19,7 +19,7 @@
             <div class="nav-container">
                 <div class="nav-logo">
                     <a href="index.html">
-                        <img src="assets/logo.jpg" alt="JMR Turris Fortis Realty Corporation" class="logo">
+                        <img src="assets/jmr-logo.svg" alt="JMR Turris Fortis Realty Corporation" class="logo">
                     </a>
                 </div>
                 <ul class="nav-menu">
@@ -34,6 +34,27 @@
                     </li>
                     <li class="nav-item">
                         <a href="index.html#contact" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="theme-switcher">
+                            <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme">
+                                <span class="theme-icon" id="theme-icon">🌙</span>
+                            </button>
+                            <div class="theme-dropdown" id="theme-dropdown">
+                                <button class="theme-option" data-theme="light">
+                                    <span class="theme-option-icon">☀️</span>
+                                    <span class="theme-option-text">Light</span>
+                                </button>
+                                <button class="theme-option" data-theme="dark">
+                                    <span class="theme-option-icon">🌙</span>
+                                    <span class="theme-option-text">Dark</span>
+                                </button>
+                                <button class="theme-option" data-theme="system">
+                                    <span class="theme-option-icon">💻</span>
+                                    <span class="theme-option-text">System</span>
+                                </button>
+                            </div>
+                        </div>
                     </li>
                 </ul>
                 <div class="nav-toggle">
@@ -260,11 +281,11 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <h4>Jasper Robles</h4>
-                        <p>Licensed Real Estate Broker</p>
-                        <p>PRC License No. 0033851</p>
-                        <p>Phone: +63 917 123 4567</p>
-                        <p>Email: jasper@jmrturrisfortis.com</p>
+                        <h4>JMR Turris Fortis Realty Corporation</h4>
+                        <p>Licensed Real Estate Brokerage</p>
+                        <p>Professional Real Estate Services</p>
+                        <p>Phone: +63 917 899 5900</p>
+                        <p>Email: jmrrealestatemanagement@gmail.com</p>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -293,7 +314,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="assets/logo.jpg" alt="JMR Turris Fortis" class="footer-logo">
+                    <img src="assets/jmr-logo.svg" alt="JMR Turris Fortis" class="footer-logo">
                     <p>Your trusted partner in premium real estate investments.</p>
                 </div>
                 <div class="footer-section">
@@ -318,5 +339,6 @@
     </footer>
 
     <script src="property-details.js"></script>
+    <script src="includes/theme-switcher.js"></script>
 </body>
 </html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
+  <!-- Background -->
+  <rect width="200" height="80" fill="#ffffff"/>
+  
+  <!-- Victorina Corporation Logo -->
+  <text x="100" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#059669">
+    VICTORINA
+  </text>
+  <text x="100" y="48" font-family="Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="middle" fill="#059669">
+    CORPORATION
+  </text>
+  
+  <!-- Victory symbol -->
+  <path d="M 95 55 L 100 60 L 105 55" stroke="#059669" stroke-width="2" fill="none"/>
+</svg>

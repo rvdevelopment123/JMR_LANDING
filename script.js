@@ -63,15 +63,55 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Header Background on Scroll
 const header = document.querySelector('.header');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.98)';
-        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+function getThemeAwareHeaderBackground() {
+    const isDarkTheme = document.documentElement.hasAttribute('data-theme') && 
+                       document.documentElement.getAttribute('data-theme') === 'dark';
+    
+    if (isDarkTheme) {
+        return {
+            scrolled: 'rgba(26, 26, 26, 0.98)',
+            normal: 'rgba(26, 26, 26, 0.95)',
+            shadow: '0 2px 20px rgba(255, 255, 255, 0.1)'
+        };
     } else {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
+        return {
+            scrolled: 'rgba(255, 255, 255, 0.98)',
+            normal: 'rgba(255, 255, 255, 0.95)',
+            shadow: '0 2px 20px rgba(0, 0, 0, 0.1)'
+        };
+    }
+}
+
+function updateHeaderBackground() {
+    const colors = getThemeAwareHeaderBackground();
+    
+    if (window.scrollY > 100) {
+        header.style.background = colors.scrolled;
+        header.style.boxShadow = colors.shadow;
+    } else {
+        header.style.background = colors.normal;
         header.style.boxShadow = 'none';
     }
+}
+
+window.addEventListener('scroll', updateHeaderBackground);
+
+// Listen for theme changes to update header colors
+const themeObserver = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+            updateHeaderBackground();
+        }
+    });
 });
+
+themeObserver.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-theme']
+});
+
+// Initial header background setup
+updateHeaderBackground();
 
 // Intersection Observer for Animations
 const observerOptions = {

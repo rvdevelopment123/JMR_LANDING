@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
+  <!-- Background -->
+  <rect width="200" height="80" fill="#ffffff"/>
+  
+  <!-- Landco Pacific Logo -->
+  <text x="100" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1e40af">
+    LANDCO
+  </text>
+  <text x="100" y="50" font-family="Arial, sans-serif" font-size="14" font-weight="normal" text-anchor="middle" fill="#1e40af">
+    PACIFIC
+  </text>
+  
+  <!-- Wave element -->
+  <path d="M 60 60 Q 100 55 140 60" stroke="#1e40af" stroke-width="2" fill="none"/>
+</svg>

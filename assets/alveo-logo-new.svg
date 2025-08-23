@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#2c4a6b"/>
+  <g transform="translate(200, 150)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="300" fill="white" letter-spacing="8px">ALVEO</text>
+  </g>
+</svg>

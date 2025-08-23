@@ -19,7 +19,7 @@
             <div class="nav-container">
                 <div class="nav-logo">
                     <a href="index.html">
-                        <img src="assets/logo.jpg" alt="JMR Turris Fortis Realty Corporation" class="logo">
+                        <img src="assets/jmr-logo.svg" alt="JMR Turris Fortis Realty Corporation" class="logo">
                     </a>
                 </div>
                 <ul class="nav-menu">
@@ -34,6 +34,27 @@
                     </li>
                     <li class="nav-item">
                         <a href="index.html#contact" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="theme-switcher">
+                            <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme">
+                                <span class="theme-icon" id="theme-icon">🌙</span>
+                            </button>
+                            <div class="theme-dropdown" id="theme-dropdown">
+                                <button class="theme-option" data-theme="light">
+                                    <span class="theme-option-icon">☀️</span>
+                                    <span class="theme-option-text">Light</span>
+                                </button>
+                                <button class="theme-option" data-theme="dark">
+                                    <span class="theme-option-icon">🌙</span>
+                                    <span class="theme-option-text">Dark</span>
+                                </button>
+                                <button class="theme-option" data-theme="system">
+                                    <span class="theme-option-icon">💻</span>
+                                    <span class="theme-option-text">System</span>
+                                </button>
+                            </div>
+                        </div>
                     </li>
                 </ul>
                 <div class="nav-toggle">
@@ -434,7 +455,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="assets/logo.jpg" alt="JMR Turris Fortis" class="footer-logo">
+                    <img src="assets/jmr-logo.svg" alt="JMR Turris Fortis" class="footer-logo">
                     <p class="footer-description">
                         Building modern, sustainable communities that meet the evolving needs of Filipino families and businesses.
                     </p>
@@ -476,5 +497,6 @@
 
     <script src="script.js"></script>
     <script src="property-details.js"></script>
+    <script src="includes/theme-switcher.js"></script>
 </body>
 </html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <rect width="800" height="400" fill="white"/>
+  <g transform="translate(50, 200)">
+    <!-- SL logo mark -->
+    <path d="M0,0 Q30,-50 60,0 Q90,-30 120,0 L120,80 Q90,50 60,80 Q30,30 0,80 Z" fill="#2d5016"/>
+    <path d="M20,20 Q40,-20 60,20 Q80,0 100,20 L100,60 Q80,40 60,60 Q40,40 20,60 Z" fill="#8b6914"/>
+  </g>
+  <g transform="translate(200, 160)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#2d5016">STA.LUCIA</text>
+    <text x="0" y="60" font-family="Arial, sans-serif" font-size="32" font-weight="normal" fill="#8b6914">LAND INC.</text>
+  </g>
+</svg>

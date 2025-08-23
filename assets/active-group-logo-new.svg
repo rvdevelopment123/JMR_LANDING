@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="white"/>
+  <g transform="translate(50, 100)">
+    <!-- Active Group logo with bird and circular elements -->
+    <circle cx="30" cy="0" r="25" fill="#ffd700"/>
+    <path d="M80,0 Q120,-40 160,0 Q140,20 120,40 Q100,20 80,0" fill="#1e5aa8"/>
+    <path d="M170,20 Q190,0 210,20 L200,40 Q190,30 180,40 Z" fill="#1e5aa8"/>
+    <rect x="0" y="60" width="300" height="4" fill="#2d5016"/>
+  </g>
+  <g transform="translate(50, 200)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#1e5aa8">ACTIVE</text>
+    <text x="120" y="0" font-family="Arial, sans-serif" font-size="32" font-weight="normal" fill="#666">GROUP</text>
+  </g>
+</svg>
